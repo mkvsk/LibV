@@ -2,6 +2,7 @@
 {    //x.x.x
     public class Version
     {
+        //readonly string userIsARat = "Invalid data. Try again: ";
         public void CheckStr(string currentV, string otherV)
         {
             bool res = false;
@@ -39,25 +40,25 @@
                 }
                 Result(res);
             }
-            catch (InvalidDataException)
+            catch (InvalidDataException ex)
             {
-                Console.WriteLine("Invalid Data Exception");
+                Console.WriteLine(ex.Message);
             }
-            catch (IndexOutOfRangeException)
+            catch (IndexOutOfRangeException ex)
             {
-                Console.WriteLine("IndexOutOfRangeException");
+                Console.WriteLine(ex.Message);
             }
-            catch (FormatException)
+            catch (FormatException ex)
             {
-                Console.WriteLine("Format Exception");
+                Console.WriteLine(ex.Message);
             }
-            catch (ArgumentNullException)
+            catch (ArgumentNullException ex)
             {
-                Console.WriteLine("Argument Null Exception");
+                Console.WriteLine(ex.Message);
             }
-            catch (OverflowException)
+            catch (OverflowException ex)
             {
-                Console.WriteLine("Overflow Exception");
+                Console.WriteLine(ex.Message);
             }
 
         }
